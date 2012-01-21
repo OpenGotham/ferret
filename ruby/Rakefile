@@ -284,12 +284,12 @@ end
 
 desc "Run :gem and install the resulting gem"
 task :install => :gem do
-  sh "#{SUDO}gem install pkg/ferret-#{Ferret::VERSION}.gem --no-rdoc --no-ri -l"
+  sh "gem install pkg/ferret-#{Ferret::VERSION}.gem --no-rdoc --no-ri -l"
 end
 
 desc "Run :clobber and uninstall the .gem"
 task :uninstall => :clobber do
-  sh "#{SUDO}gem uninstall ferret"
+  sh "gem uninstall ferret"
 end
 
 desc "Same as :install but you must be rootgem"
